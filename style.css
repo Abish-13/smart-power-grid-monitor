@@ -1,0 +1,48 @@
+/* Custom styles */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Notification toast animation */
+.toast-fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+.toast-fade-out {
+    animation: fadeOut 0.5s ease-in forwards;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeOut {
+    from { opacity: 1; transform: translateY(0); }
+    to { opacity: 0; transform: translateY(20px); }
+}
+
+/* Modal styles */
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* Simple loader */
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 🗺️ NEW: Leaflet Map Styles */
+#map-container .leaflet-pane {
+    z-index: 10;
+}
+/* Style for dark map tiles */
+.leaflet-tile-pane {
+    filter: brightness(0.6) invert(1) contrast(3) hue-rotate(200deg) saturate(0.3) brightness(0.7);
+}
